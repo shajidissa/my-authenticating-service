@@ -12,6 +12,9 @@ public class ServiceConfig {
 
 
   public String getJwtSigningKey() {
+	  System.out.println("*****************************");
+	  System.out.println(jwtSigningKey + "*****************************");
+	  System.out.println("*****************************");
     return jwtSigningKey;
   }
 
