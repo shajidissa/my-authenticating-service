@@ -4,7 +4,7 @@
 
   <groupId>uk.co.h2ss</groupId>
   <artifactId>my-authentication-service</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.1.0</version>
   <packaging>jar</packaging>
 
   <name>Eagle Eye Authentication Service</name>
@@ -102,6 +102,7 @@
   </properties>
 
   <build>
+  	 <finalName>my-authentication-service</finalName>
      <plugins>
          <!-- We use the Resources plugin to filer Dockerfile and run.sh, it inserts actual JAR filename -->
          <!-- The final Dockerfile will be created in target/dockerfile/Dockerfile -->
