@@ -38,7 +38,7 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
     
     
     
-    
+    /**
     
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -47,7 +47,7 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
            .antMatchers(HttpMethod.OPTIONS, "/oauth/token").permitAll();
     }
     
-    
+    */
     
     
     
