@@ -11,7 +11,7 @@ import org.springframework.web.filter.CorsFilter;
 @Configuration
 public class CorsConfig {
 
-private String allowOrigin= "http://localhost:8085";
+//private String allowOrigin= "http://localhost:8085";
 
 @Bean
 public FilterRegistrationBean corsFilter() {
@@ -19,7 +19,8 @@ public FilterRegistrationBean corsFilter() {
     
     CorsConfiguration configAutenticacao = new CorsConfiguration();
     configAutenticacao.setAllowCredentials(true);
-    configAutenticacao.addAllowedOrigin(allowOrigin);
+    //configAutenticacao.addAllowedOrigin(allowOrigin);
+    configAutenticacao.addAllowedOrigin("*");  
     configAutenticacao.addAllowedHeader("Authorization");
     configAutenticacao.addAllowedHeader("Content-Type");
     configAutenticacao.addAllowedHeader("Accept");
