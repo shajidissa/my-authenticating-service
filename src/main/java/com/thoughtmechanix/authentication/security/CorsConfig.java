@@ -26,7 +26,7 @@ public FilterRegistrationBean corsFilter() {
   //configAutenticacao.addAllowedHeader("Authorization");
     //configAutenticacao.addAllowedHeader("Content-Type");
     //configAutenticacao.addAllowedHeader("Accept");
-    configAutenticacao.setAllowCredentials(true); 
+    //configAutenticacao.setAllowCredentials(true); 
     configAutenticacao.addAllowedHeader("*");
     configAutenticacao.addAllowedMethod("POST");
     configAutenticacao.addAllowedMethod("GET");
