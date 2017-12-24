@@ -37,6 +37,12 @@ public FilterRegistrationBean corsFilter() {
     // source.registerCorsConfiguration("/**", configAutenticacao); // Global for all paths
     // source.registerCorsConfiguration("*", configAutenticacao); // Global for all paths
     
+    source.registerCorsConfiguration("/api/**", configAutenticacao);
+    source.registerCorsConfiguration("/v2/api-docs", configAutenticacao);
+    source.registerCorsConfiguration("/oauth/**", configAutenticacao);
+    source.registerCorsConfiguration("/*/api/**", configAutenticacao);
+    source.registerCorsConfiguration("/*/oauth/**", configAutenticacao);
+    
     FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
     bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
     return bean;
