@@ -12,6 +12,8 @@ import org.springframework.web.filter.CorsFilter;
 public class CorsConfig {
 
 //private String allowOrigin= "http://localhost:8085";
+	
+// https://github.com/spring-projects/spring-security-oauth/issues/938
 
 @Bean
 public FilterRegistrationBean corsFilter() {
