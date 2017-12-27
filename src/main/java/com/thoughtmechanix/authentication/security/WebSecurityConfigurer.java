@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
@@ -32,6 +33,13 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .withUser("john.carnell").password("password1").roles("USER")
                 .and()
                 .withUser("william.woodward").password("password2").roles("USER", "ADMIN");
+    }
+    
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/v2/api-docs", "/configuration/ui", 
+        		"/swagger-resources", "/configuration/security", 
+        		"/swagger-ui.html", "/webjars/**", "*swagger*");
     }
     
     
