@@ -41,7 +41,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
         .antMatchers("swagger").permitAll();*/
         //.anyRequest().permitAll();
         
-    	/*
+    	
     	 http
          .anonymous()
              .authorities("ROLE_ANONYMOUS")
@@ -55,12 +55,15 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
              .anyRequest().authenticated();
     
     	
-    	*/
+    	
+    	
+    	/*
+    	
     	http
         .authorizeRequests()
         .antMatchers("/swagger-ui.html").access("hasAuthority('ROLE_USER')")
         .anyRequest().fullyAuthenticated();
-    	
+    	*/
     	//http.authorizeRequests().antMatchers("/swagger-ui.html", "swagger-ui.html").anonymous().anyRequest().authenticated();
     }
     
