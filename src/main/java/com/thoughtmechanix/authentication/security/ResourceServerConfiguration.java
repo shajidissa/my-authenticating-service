@@ -11,7 +11,6 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 
 @Configuration
-@EnableResourceServer
 public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
 
 
@@ -29,7 +28,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
           .authenticated();
         */
         
-    	/**
+    	
     	http
     	.anonymous().and()
     	.authorizeRequests()
@@ -38,10 +37,10 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
         .antMatchers("/swagger-ui.html").permitAll()
         .antMatchers("/swagger-ui.html").permitAll()
         .antMatchers("swagger*").permitAll()
-        .antMatchers("swagger").permitAll();*/
+        .antMatchers("swagger").permitAll();
         //.anyRequest().permitAll();
         
-    	
+    	/**
     	 http
          .anonymous()
              .authorities("ROLE_ANONYMOUS")
