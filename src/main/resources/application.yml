@@ -7,13 +7,15 @@ logging:
 
 eureka:
   instance:
-    hostname: 51.141.9.85
+    #hostname: 51.141.9.85
+    hostname: shajid.ddns.net
     preferIpAddress: false
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-        defaultZone: http://51.141.9.85:8761/eureka
+        #defaultZone: http://51.141.9.85:8761/eureka
+        defaultZone: http://shajid.ddns.net:8761/eureka
 
 server:
   contextPath:   /auth
